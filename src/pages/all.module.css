@@ -1,0 +1,224 @@
+@font-face {
+    font-family: 'Modak';
+    src: url('/fonts/Modak-Regular.ttf');
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-Thin.ttf');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-Regular.ttf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-Bold.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-Black.ttf');
+    font-weight: 700;
+}
+
+@keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0%;
+      transform: translateY(-50%);
+    }
+    100% {
+      opacity: 100%;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes imgEnterBottom {
+    0% {
+
+      transform: translateY(100%);
+    }
+    100% {
+
+      transform: translateY(0);
+    }
+  }
+  @keyframes imgEnterLeft {
+    0% {
+      opacity: 0%;
+      transform: translateX(-50%);
+    }
+    50%{
+        rotate: 0deg;
+    }
+    100% {
+      opacity: 100%;
+      rotate: -15deg;
+      transform: translateY(0);
+    }
+  }
+  @keyframes imgEnterRight {
+    0% {
+      opacity: 0%;
+      transform: translateX(50%);
+    }
+    50%{
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 15deg;
+      opacity: 100%;
+      transform: translateY(0);
+    }
+  }
+  
+
+
+.container{
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    color:black;
+    transition:1s;
+    background-size: cover;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.containerQuestion{
+  margin-top: 7rem;
+}
+.question{
+  font-family: 'Modak';
+  font-size: 2.5rem;
+}
+.inputRange{
+    margin: 10rem 0rem;
+    width: 15rem;
+    rotate: -90deg;
+    -webkit-appearance: none;
+    &:focus {
+        outline: none;
+    }
+    &::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 1px;
+        cursor: pointer;
+        box-shadow: none;
+        background: black;
+        border-radius: 0px;
+        border: 0px solid #010101;
+    }
+    &::-moz-range-track {
+        width: 100%;
+        height: 1px;
+        cursor: pointer;
+        box-shadow: none;
+        background: black;
+        border-radius: 0px;
+        border: 0px solid #010101;
+    }
+  
+    &::-webkit-slider-thumb {
+        box-shadow: none;
+        border: 0px solid black;
+        box-shadow: 0px 10px 10px rgba(0,0,0,0.25);
+        height: 42px;
+        width: 22px;
+        border-radius: 22px;
+        background: black;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -20px;
+    }
+  &::-moz-range-thumb{
+        box-shadow: none;
+        border: 0px solid #ffffff;
+        box-shadow: 0px 10px 10px rgba(0,0,0,0.25);
+        height: 42px;
+        width: 22px;
+        border-radius: 22px;
+        background: rgba(255,255,255,1);
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -20px;
+  }
+  &::-moz-focus-outer {
+    border: 0;
+    }
+
+}
+
+
+
+.titleFirstPage{
+    position: absolute;
+    font-family: 'Modak';
+    margin: 0px !important;
+    text-align: left;
+    width: 20rem;
+    font-size: 5rem;
+    transform: translateX(-50%);
+    left:50%;
+    top: 2.7rem;
+    line-height: 0.9;
+    animation: slideIn 1s ease;
+    rotate: -1deg;
+}
+
+.nextButton{
+    position: absolute;
+    width: 14rem;
+    height: 4.5rem;
+    left: 25%; 
+    top: 42vh;
+    border-radius: 100px;
+    box-shadow: 1px 5px 0px rgb(0, 0, 0);
+    background-color: #562C2C;
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 1.1rem;
+    animation: fadeIn 2s ease;
+}
+
+.dogBrega{
+    position: absolute;
+    width: 28rem;
+    left: 0rem;
+    bottom: 0rem;
+    animation: imgEnterBottom 3s;
+}
+.dogSamba{
+    position: absolute;
+    width: 22rem;
+    bottom: -3rem;
+    left: -6rem;
+    rotate: -15deg;
+    animation: imgEnterLeft 1s;
+    
+
+}
+.dogRap{
+    position: absolute;
+    width: 25rem;
+    bottom: -5rem;
+    right: -10rem;
+    rotate: 15deg;
+    animation: imgEnterRight 1s;
+
+}
+@media (min-width:550px) {
+    .container{
+        width: 360px;
+        height: 640px;
+    }
+}
