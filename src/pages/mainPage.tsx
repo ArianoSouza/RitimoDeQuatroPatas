@@ -58,11 +58,27 @@ export default function MainPage(){
     const [actualData,setActualData] = useState<Data>()
     const [actualValue,setActualValue] = useState<number>(50)
     const [bgImage,setBgImage] = useState<string>('/img/bg_home_v1.png')
+    const [respValue,setRespValue] = useState<string>('')
     const navigate = useNavigate()
 
      
-    const setValueAndNext = () =>{
-    }
+    useEffect(()=>{
+
+        if (actualValue < 25){
+            setRespValue('De jeito nenhum!')
+        }
+        if (actualValue >= 25){
+            setRespValue('Acho que não, hein!')
+        }
+        if (actualValue >= 50){
+            setRespValue('Acredito que sim!')
+        }
+        if (actualValue >= 75){
+            setRespValue('Com certeza!')
+        }
+
+    },[actualValue])
+
     const handleEvent = (event:React.ChangeEvent<HTMLInputElement>)=>{
         const newValue = Number(event.target.value);
         setActualValue(newValue)
@@ -104,15 +120,16 @@ export default function MainPage(){
                 style={question == -1? {visibility:"visible"}:{visibility:"hidden"}}>
                     Qual o ritmo do seu Pet?
             </h1>
-            <button onClick={()=>{setQuestion(0)}} style={question == -1? {visibility:"visible"}:{visibility:"hidden"}} className={Style.nextButton}>VAMOS DESCOBRIR!</button>
+            <button onClick={()=>{setQuestion(0)}} style={question == -1? {visibility:"visible"}:{visibility:"hidden"}} className={Style.nextButton} >VAMOS DESCOBRIR!</button>
             <img src={dogBrega} alt="" className={Style.dogBrega} style={question == -1? {visibility:"visible"}:{visibility:"hidden"}} />
             <img src={dogSamba} alt="" className={Style.dogSamba} style={question == -1? {visibility:"visible"}:{visibility:"hidden"}} />
             <img src={dogRap} alt="" className={Style.dogRap} style={question == -1? {visibility:"visible"}:{visibility:"hidden"}} />
             <div className={Style.containerQuestion} style={question >= 0 ? {visibility:"visible"}:{visibility:"hidden"} }>
                 <h1 className={Style.question}>{actualData?.question}</h1>
+                <h3 className={Style.respValue}>{respValue}</h3>
                 <input className={Style.inputRange} type='range' min={0} max={100} step="1" onChange={handleEvent}/>
-                <h3>{actualValue}</h3>
-                <button onClick={()=>{console.log(allValues); setQuestion(question+1)}}>next</button>
+                <img src="./volume.png" alt="volume" className={Style.soundIcon}/>
+                <button onClick={()=>{console.log(allValues); setQuestion(question+1)}} className={Style.nextButtonQuestion}>Próximo</button>
             </div>
         </div>
        
