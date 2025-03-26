@@ -115,12 +115,12 @@ export default function PageResult(){
             setAD(allData[0])
             setBgImage(allData[0].imageBg)
         } else if(data[2]>=50 && data[3]>=50 && data[4]>=50 && data[9]>=50){
-            setMB({marginLeft:'0px', marginRight:'-14rem'})
+            setMB({marginLeft:'0px', marginRight:'-18rem'})
             setAD(allData[1])
             setBgImage(allData[1].imageBg)
         }
         else if(data[2]>=50 && data[3]>=50 && data[5]>=50 && data[8]>=50){
-            setMB({marginLeft:'0px', marginRight:'-14rem'})
+            setMB({marginLeft:'0px', marginRight:'-18rem'})
             setAD(allData[2])
             setBgImage(allData[2].imageBg)
         }
@@ -148,12 +148,12 @@ export default function PageResult(){
             setBgImage(allData[8].imageBg)
         }
         else if(data[2]>=50 && data[4]>=50 && data[5]>=50 && data[9]>=50){
-            setMB({marginLeft:'0px', marginRight:'-14rem'})
+            setMB({marginLeft:'0px', marginRight:'-18rem'})
             setAD(allData[9])
             setBgImage(allData[9].imageBg)
         }
         else{
-            setMB({marginLeft:'0px', marginRight:'-14rem'})
+            setMB({marginLeft:'0px', marginRight:'-18rem'})
             setAD(allData[10])
             setBgImage(allData[10].imageBg)
         }

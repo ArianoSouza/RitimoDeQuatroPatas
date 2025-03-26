@@ -88,7 +88,7 @@
     color:black;
     transition:1s;
     background-size: cover;
-    background-position-x: -3rem;
+    background-position-x: 0rem;
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
@@ -102,7 +102,8 @@ font-family: 'Modak';
 font-size: 5rem;
 line-height: 1.1;
 rotate: -5deg;
-margin-top: 5rem;
+margin-top: 4rem;
+margin-bottom: 1.7rem;
 -webkit-text-stroke: 2px #000; 
 text-stroke: 2px #000; 
 color: white;
@@ -126,7 +127,7 @@ align-items: center;
 }
 
 .buttonDownload{
-  width: 10rem;
+  width: 9rem;
   background-color: #562C2C;
   border: 2px solid black !important;
   height: 4rem;
@@ -138,7 +139,7 @@ align-items: center;
   flex-direction: column;
   height: 8.5rem;
   justify-content: space-between;
-  margin-top: 4rem;
+  margin-top: 0.5rem;
   margin-left: -12rem;
 
 }
@@ -163,7 +164,7 @@ align-items: center;
 }
 .question{
   font-family: 'Modak';
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 0.9;
   height: 10vh;
 
@@ -173,7 +174,7 @@ align-items: center;
 .respValue{
   font-family: 'Lato';
   font-weight: 700;
-  margin-top: -1rem;
+  margin-top: 0rem;
   margin-bottom: 5rem;
 }
 .soundIcon{
@@ -182,7 +183,7 @@ align-items: center;
 }
 .inputRange {
   -webkit-appearance: none;
-  width: 70%;
+  width: 60%;
   height: 15px;
   background: white;
   outline: none;
@@ -194,7 +195,7 @@ align-items: center;
 
 .nextButtonQuestion{
   width: 10rem;
-    height: 4.5rem;
+    height: 4rem;
     left: 25%; 
     top: 42vh;
     border-radius: 100px;
@@ -265,16 +266,16 @@ align-items: center;
 
 .dogBrega{
     position: absolute;
-    width: 28rem;
-    left: 0rem;
+    width: 25rem;
+    left: 4.5rem;
     bottom: 0rem;
     animation: imgEnterBottom 3s;
 }
 .dogSamba{
     position: absolute;
-    width: 22rem;
+    width: 18rem;
     bottom: -3rem;
-    left: -6rem;
+    left: -4rem;
     rotate: -15deg;
     animation: imgEnterLeft 1s;
     
@@ -282,9 +283,9 @@ align-items: center;
 }
 .dogRap{
     position: absolute;
-    width: 25rem;
+    width: 20rem;
     bottom: -5rem;
-    right: -10rem;
+    right: -7rem;
     rotate: 15deg;
     animation: imgEnterRight 1s;
 
